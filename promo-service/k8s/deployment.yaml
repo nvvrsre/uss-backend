@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: promo-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: promo-service
+  template:
+    metadata:
+      labels:
+        app: promo-service
+    spec:
+      containers:
+      - name: promo-service
+        image: nvvrsre/usindus-promo-service  # <-- Update with your Docker Hub repo
+        ports:
+        - containerPort: 3007
+        env:
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: DB_HOST
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: DB_NAME
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: db-config
+              key: DB_PORT
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: DB_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: DB_SECRET
+              key: DB_PASSWORD
+        - name: PORT
+          value: "3007"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

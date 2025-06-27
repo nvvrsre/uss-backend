@@ -1,0 +1,23 @@
+# API Gateway
+
+Node.js-based API Gateway for UshaSree Industries microservices.
+
+## Routes
+
+- **/auth** → Auth Service
+- **/products** → Product Service
+- **/cart** → Cart Service
+- **/orders** → Order Service
+- **/order-items** → Order Service
+- **/payment** → Payment Service
+- **/notify** → Notification Service
+
+## Environment Variables
+
+See `.env.example` for required values.
+
+## Docker
+
+```sh
+docker build -t <your-dockerhub>/ushasree-api-gateway:latest .
+docker run -p 3000:3000 --env-file .env <your-dockerhub>/ushasree-api-gateway:latest

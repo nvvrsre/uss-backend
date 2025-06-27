@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: promo-service
+spec:
+  selector:
+    app: promo-service
+  ports:
+    - protocol: TCP
+      port: 3007
+      targetPort: 3007
+  type: ClusterIP

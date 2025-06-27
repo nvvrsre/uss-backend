@@ -1,0 +1,19 @@
+# Auth Service
+
+Microservice for user authentication and registration in UshaSree Industries.
+
+## Endpoints
+
+- **POST /register** — Register a new user
+- **POST /login** — Login with email and password
+- **GET /users** — List all users
+
+## Environment Variables
+
+See `.env.example` for required values.
+
+## Docker
+
+```sh
+docker build -t <your-dockerhub>/ushasree-auth:latest .
+docker run -p 3001:3001 --env-file .env <your-dockerhub>/ushasree-auth:latest

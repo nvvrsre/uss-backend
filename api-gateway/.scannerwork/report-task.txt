@@ -1,0 +1,6 @@
+projectKey=api-gateway
+serverUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000
+serverVersion=25.5.0.107428
+dashboardUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000/dashboard?id=api-gateway
+ceTaskId=84fba5bf-61ef-4ee7-b63e-e126b5084de4
+ceTaskUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=84fba5bf-61ef-4ee7-b63e-e126b5084de4

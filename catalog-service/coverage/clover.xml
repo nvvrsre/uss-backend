@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1750909593856" clover="3.2.0">
+  <project timestamp="1750909593856" name="All files">
+    <metrics statements="56" coveredstatements="48" conditionals="44" coveredconditionals="28" methods="16" coveredmethods="12" elements="116" coveredelements="88" complexity="0" loc="56" ncloc="56" packages="1" files="1" classes="1"/>
+    <file name="server.js" path="G:\UshaSree Project 1.0\App Code\catalog-service\server.js">
+      <metrics statements="56" coveredstatements="48" conditionals="44" coveredconditionals="28" methods="16" coveredmethods="12"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="66" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="79" count="11" type="cond" truecount="1" falsecount="1"/>
+      <line num="81" count="11" type="cond" truecount="4" falsecount="0"/>
+      <line num="82" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="83" count="6" type="stmt"/>
+      <line num="87" count="1" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+      <line num="92" count="1" type="stmt"/>
+      <line num="93" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="94" count="1" type="stmt"/>
+      <line num="95" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="96" count="1" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="102" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="103" count="2" type="stmt"/>
+      <line num="104" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="105" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="106" count="1" type="stmt"/>
+      <line num="107" count="1" type="stmt"/>
+      <line num="108" count="1" type="stmt"/>
+      <line num="113" count="1" type="stmt"/>
+      <line num="114" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="115" count="1" type="stmt"/>
+      <line num="116" count="1" type="stmt"/>
+      <line num="120" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="121" count="1" type="stmt"/>
+      <line num="127" count="1" type="stmt"/>
+      <line num="128" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="129" count="1" type="stmt"/>
+      <line num="130" count="1" type="stmt"/>
+      <line num="134" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="135" count="1" type="stmt"/>
+      <line num="141" count="1" type="stmt"/>
+      <line num="142" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="143" count="1" type="stmt"/>
+      <line num="144" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="145" count="1" type="stmt"/>
+      <line num="149" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="157" count="1" type="stmt"/>
+      <line num="158" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

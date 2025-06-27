@@ -1,0 +1,17 @@
+# Notification Service
+
+Microservice for sending email and SMS notifications in UshaSree Industries.
+
+## Endpoints
+
+- **POST /notify** — Send notification (email/SMS)
+
+## Sample Request
+
+```json
+{
+  "email": "user@example.com",
+  "phone": "9876543210",
+  "subject": "Order Confirmed",
+  "message": "Your order has been placed!"
+}

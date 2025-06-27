@@ -1,0 +1,18 @@
+# Payment Service
+
+Microservice for processing payments in UshaSree Industries.
+
+## Endpoints
+
+- **POST /payment** — Make payment for order
+- **GET /payment/:userId** — Get all payments by user
+
+## Environment Variables
+
+See `.env.example` for required values.
+
+## Docker
+
+```sh
+docker build -t <your-dockerhub>/ushasree-payment:latest .
+docker run -p 3005:3005 --env-file .env <your-dockerhub>/ushasree-payment:latest

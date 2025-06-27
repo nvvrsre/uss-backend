@@ -1,0 +1,19 @@
+# Order Service
+
+Microservice for handling orders in UshaSree Industries.
+
+## Endpoints
+
+- **POST /orders** — Place a new order
+- **GET /orders/:userId** — Get all orders for a user
+- **GET /order-items/:orderId** — Get items for a specific order
+
+## Environment Variables
+
+See `.env.example` for required values.
+
+## Docker
+
+```sh
+docker build -t <your-dockerhub>/ushasree-order:latest .
+docker run -p 3004:3004 --env-file .env <your-dockerhub>/ushasree-order:latest

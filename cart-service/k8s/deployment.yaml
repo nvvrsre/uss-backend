@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cart-service
+  template:
+    metadata:
+      labels:
+        app: cart-service
+    spec:
+      containers:
+      - name: cart-service
+        image: nvvrsre/usindus-cart-service
+        ports:
+        - containerPort: 3003
+        env:
+        - name: DB_HOST
+          value: "mysql"
+        - name: DB_USER
+          value: "ushasree-db"
+        - name: DB_PASSWORD
+          value: "ushasree123"
+        - name: DB_NAME
+          value: "ushasree_cart"
+        - name: PORT
+          value: "3003"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
