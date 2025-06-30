@@ -1,13 +1,40 @@
-name: Ushasree CI - Stage 0 (Code Checkout)
+name: Ushasree CI Pipeline (Matrix for All Backend Services)
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  checkout-code:
+  build-and-lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - api-gateway
+          - auth-service
+          - cart-service
+          - catalog-service
+          - notification-service
+          - order-service
+          - payment-service
+          - product-service
+          - promo-service
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd ${{ matrix.service }}
+          npm install
+
+      - name: Run ESLint
+        run: |
+          cd ${{ matrix.service }}
+          npx eslint .
