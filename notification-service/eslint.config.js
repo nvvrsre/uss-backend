@@ -1,4 +1,5 @@
-export default [
+// eslint.config.js (for ESLint 9+ with CommonJS)
+module.exports = [
   {
     files: ["**/*.js"],
     ignores: ["node_modules/", "dist/", "coverage/"],
@@ -12,4 +13,3 @@ export default [
     },
   },
 ];
-
