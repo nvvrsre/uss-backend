@@ -38,3 +38,8 @@ jobs:
         run: |
           cd ${{ matrix.service }}
           npx eslint server.js start.js tests/ || true
+    
+      - name: Run Unit Tests
+        run: |
+          cd ${{ matrix.service }}
+          npm test
