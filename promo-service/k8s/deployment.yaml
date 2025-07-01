@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: promo-service
-        image: nvvrsre/usindus-promo-service  # <-- Update with your Docker Hub repo
+        image: nvvrsre/uss-promo-service
         ports:
         - containerPort: 3007
         env:
@@ -41,7 +41,7 @@ spec:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: DB_SECRET
+              name: db-secret     # <-- fixed!
               key: DB_PASSWORD
         - name: PORT
           value: "3007"

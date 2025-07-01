@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: cart-service
-        image: nvvrsre/usindus-cart-service
+        image: nvvrsre/cart-service:latest
         ports:
         - containerPort: 3003
         env:
