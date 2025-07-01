@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  DB_HOST: nvvr-rds.c588mswco6jw.ap-south-1.rds.amazonaws.com
+  DB_NAME: nvvrdb
+  DB_PORT: "3306"
