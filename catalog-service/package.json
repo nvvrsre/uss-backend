@@ -4,6 +4,7 @@
   "description": "Catalog microservice for UshaSree Stores",
   "main": "server.js",
   "scripts": {
+    "release": "standard-version",
     "start": "node server.js",
     "lint": "eslint .",
     "test": "jest",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "eslint": "^9.30.0",
     "jest": "^30.0.2",
+    "standard-version": "^9.5.0",
     "supertest": "^7.1.1"
   }
 }
