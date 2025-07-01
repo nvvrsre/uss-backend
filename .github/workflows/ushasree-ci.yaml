@@ -38,7 +38,15 @@ jobs:
         run: |
           cd ${{ matrix.service }}
           npx eslint server.js start.js tests/ || true
-    
+     
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v2
+        with:
+          projectBaseDir: ${{ matrix.service }}
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
       - name: Run Unit Tests
         run: |
           cd ${{ matrix.service }}
