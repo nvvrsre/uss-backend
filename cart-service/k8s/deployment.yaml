@@ -13,25 +13,40 @@ spec:
         app: cart-service
     spec:
       containers:
-      - name: cart-service
-        image: nvvrsre/uss-cart-service
-        ports:
-        - containerPort: 3003
-        env:
-        - name: DB_HOST
-          value: "mysql"
-        - name: DB_USER
-          value: "ushasree-db"
-        - name: DB_PASSWORD
-          value: "ushasree123"
-        - name: DB_NAME
-          value: "ushasree_cart"
-        - name: PORT
-          value: "3003"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: cart-service
+          image: nvvrsre/usindus-cart-service
+          ports:
+            - containerPort: 3003
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_HOST
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_NAME
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: DB_PASSWORD
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
