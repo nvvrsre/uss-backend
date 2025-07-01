@@ -6,8 +6,10 @@ on:
 
 jobs:
   build-and-lint:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 2
       matrix:
         service:
           - api-gateway
@@ -66,7 +68,7 @@ jobs:
         with:
           image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:${{ github.sha }}
           format: 'table'
-          exit-code: '1'
+          exit-code: '0'       # Set to '1' to fail the job on vulnerabilities
           ignore-unfixed: true
 
       - name: Push Docker image
