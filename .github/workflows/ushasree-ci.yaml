@@ -105,7 +105,9 @@ jobs:
           git config --global user.name "nvvrsre"
           git add ${{ matrix.service }}/k8s/deployment.yaml
           git commit -m "ci: update image for ${{ matrix.service }} to v${{ steps.version.outputs.VERSION }}" || echo "No changes to commit"
-          # Pull with rebase and push, retry up to 3 times on failure (handle race)
+          # Auto-add and commit any new changes before rebase (handles npm or yq side effects)
+          git add -u
+          git commit -m "ci: auto-stage any changes before rebase" || echo "No changes to commit"
           n=0
           until [ $n -ge 3 ]
           do
@@ -116,3 +118,4 @@ jobs:
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
