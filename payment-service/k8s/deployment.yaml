@@ -13,25 +13,25 @@ spec:
         app: payment-service
     spec:
       containers:
-      - name: payment-service
-        image: nvvrsre/payment-service
-        ports:
-        - containerPort: 3005
-        env:
-        - name: DB_HOST
-          value: "mysql"
-        - name: DB_USER
-          value: "ushasree-db"
-        - name: DB_PASSWORD
-          value: "ushasree123"
-        - name: DB_NAME
-          value: "ushasree_payment"
-        - name: PORT
-          value: "3005"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: payment-service
+          image: nvvrsre/payment-service:v1
+          ports:
+            - containerPort: 3005
+          env:
+            - name: DB_HOST
+              value: "mysql"
+            - name: DB_USER
+              value: "ushasree-db"
+            - name: DB_PASSWORD
+              value: "ushasree123"
+            - name: DB_NAME
+              value: "ushasree_payment"
+            - name: PORT
+              value: "3005"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
