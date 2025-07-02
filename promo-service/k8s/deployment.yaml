@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: promo-service
-        image: nvvrsre/uss-promo-service
+        image: nvvrsre/promo-service
         ports:
         - containerPort: 3007
         env:

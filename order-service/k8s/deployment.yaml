@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: nvvrsre/usindus-order-service
+        image: nvvrsre/order-service
         ports:
         - containerPort: 3004
         env:

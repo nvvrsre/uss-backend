@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: catalog-service
-          image: nvvrsre/usindus-catalog-service
+          image: nvvrsre/catalog-service
           ports:
             - containerPort: 3008
           env:
