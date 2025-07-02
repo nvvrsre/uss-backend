@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
 
+permissions: write-all   # <--- Needed to push changes back to the repo
+
 jobs:
   uss-backend-ci:
     timeout-minutes: 60
@@ -40,7 +42,7 @@ jobs:
         run: |
           cd ${{ matrix.service }}
           npx eslint server.js start.js tests/ || true
-     
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v2
         with:
@@ -81,3 +83,26 @@ jobs:
       - name: Push Docker image
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:v${{ steps.version.outputs.VERSION }}
+
+      # --- NEW: Update Deployment YAML with new image tag ---
+      - name: Install yq
+        run: |
+          sudo wget https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64 -O /usr/local/bin/yq
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Update deployment.yaml with new image tag
+        run: |
+          yq -i '
+            .spec.template.spec.containers[] |=
+              select(.name == "${{ matrix.service }}") .image = "${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:v${{ steps.version.outputs.VERSION }}"
+            ' ${{ matrix.service }}/k8s/deployment.yaml
+
+      - name: Commit and push updated deployment.yaml
+        run: |
+          git config --global user.email "nvvr53@gmail.com"
+          git config --global user.name "nvvrsre"
+          git add ${{ matrix.service }}/k8s/deployment.yaml
+          git commit -m "ci: update image for ${{ matrix.service }} to v${{ steps.version.outputs.VERSION }}" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
