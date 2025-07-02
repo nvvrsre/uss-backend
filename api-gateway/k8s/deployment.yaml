@@ -13,17 +13,17 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - name: api-gateway
-        image: nvvrsre/api-gateway
-        ports:
-        - containerPort: 3000
-        env:
-        - name: PORT
-          value: "3000"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: api-gateway
+          image: nvvrsre/api-gateway:v1
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
