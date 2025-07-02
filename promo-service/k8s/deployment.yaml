@@ -13,42 +13,42 @@ spec:
         app: promo-service
     spec:
       containers:
-      - name: promo-service
-        image: nvvrsre/promo-service
-        ports:
-        - containerPort: 3007
-        env:
-        - name: DB_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: db-config
-              key: DB_HOST
-        - name: DB_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: db-config
-              key: DB_NAME
-        - name: DB_PORT
-          valueFrom:
-            configMapKeyRef:
-              name: db-config
-              key: DB_PORT
-        - name: DB_USER
-          valueFrom:
-            secretKeyRef:
-              name: db-secret
-              key: DB_USER
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: db-secret     # <-- fixed!
-              key: DB_PASSWORD
-        - name: PORT
-          value: "3007"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: promo-service
+          image: nvvrsre/promo-service:v1
+          ports:
+            - containerPort: 3007
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_HOST
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_NAME
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret # <-- fixed!
+                  key: DB_PASSWORD
+            - name: PORT
+              value: "3007"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
