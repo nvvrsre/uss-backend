@@ -1,6 +1,6 @@
 projectKey=api-gateway
-serverUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000
+serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
-dashboardUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000/dashboard?id=api-gateway
-ceTaskId=b8dcba78-7c2e-41b4-8020-bcd2b43b46be
-ceTaskUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=b8dcba78-7c2e-41b4-8020-bcd2b43b46be
+dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=api-gateway
+ceTaskId=3c81e503-8713-4f3d-8cb3-13ea9f7a6fea
+ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=3c81e503-8713-4f3d-8cb3-13ea9f7a6fea
