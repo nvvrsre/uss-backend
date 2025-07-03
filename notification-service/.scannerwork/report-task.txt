@@ -2,5 +2,5 @@ projectKey=notification-service
 serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
 dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=notification-service
-ceTaskId=2cbb5178-416a-42ec-89d0-dce732f0e126
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=2cbb5178-416a-42ec-89d0-dce732f0e126
+ceTaskId=5980ec54-78b8-4588-b66a-0c7a7db8b09f
+ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=5980ec54-78b8-4588-b66a-0c7a7db8b09f
