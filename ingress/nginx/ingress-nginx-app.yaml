@@ -2,15 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ingress-nginx
-  namespace: argocd
+  namespace: default        # <-- Your ArgoCD's namespace!
 spec:
   project: default
   source:
     repoURL: https://kubernetes.github.io/ingress-nginx
     chart: ingress-nginx
-    targetRevision: 4.10.0      # Latest stable (update as needed)
+    targetRevision: 4.10.0
+    helm:
+      parameters:
+        - name: controller.service.type
+          value: LoadBalancer
   destination:
     server: https://kubernetes.default.svc
-    namespace: ingress-nginx
+    namespace: ingress-nginx     # <-- Where ingress-nginx will be installed
   syncPolicy:
     automated: {}

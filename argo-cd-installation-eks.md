@@ -67,6 +67,20 @@ kubectl patch svc argocd-server -p '{"spec": {"type": "LoadBalancer"}}'
 kubectl get svc argocd-server 
 kubectl get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+### IF YOU USE DEFAULT NAMESPACE THEN WE HAVE TO CREATE ARGOCD-APPLICATION-CONTROLLER.YAML WITH BELOW CODE
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: argocd-application-controller-cluster-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: argocd-application-controller
+  namespace: default
 
 ---
 
