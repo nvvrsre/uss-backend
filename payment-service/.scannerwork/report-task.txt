@@ -2,5 +2,5 @@ projectKey=payment-service
 serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
 dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=payment-service
-ceTaskId=9438d7c5-ba36-4271-b12a-0f9202ac92df
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=9438d7c5-ba36-4271-b12a-0f9202ac92df
+ceTaskId=67bf7e9a-56d3-4d43-86db-5ea729aff344
+ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=67bf7e9a-56d3-4d43-86db-5ea729aff344
