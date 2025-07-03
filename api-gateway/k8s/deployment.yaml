@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: api-gateway
+      annotations:
+        argocd-sync-force: "16042346762"
     spec:
       containers:
         - name: api-gateway
