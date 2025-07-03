@@ -1,6 +1,6 @@
 projectKey=product-service
-serverUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000
+serverUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
-dashboardUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000/dashboard?id=product-service
-ceTaskId=eef943b7-fb1d-4cda-b0c0-d94dd18d4f5b
-ceTaskUrl=http://a7380bc965b9b44c893ac5108e8dd37c-542654099.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=eef943b7-fb1d-4cda-b0c0-d94dd18d4f5b
+dashboardUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000/dashboard?id=product-service
+ceTaskId=8031294e-12c1-4df4-a99d-36cc862df838
+ceTaskUrl=http://a4b733948bfa34dedb16ee35dcb06da7-810993661.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=8031294e-12c1-4df4-a99d-36cc862df838

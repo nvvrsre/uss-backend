@@ -13,25 +13,25 @@ spec:
         app: product-service
     spec:
       containers:
-      - name: product-service
-        image: nvvrsre/product-service
-        ports:
-        - containerPort: 3002
-        env:
-        - name: DB_HOST
-          value: "mysql"
-        - name: DB_USER
-          value: "ushasree-db"
-        - name: DB_PASSWORD
-          value: "ushasree123"
-        - name: DB_NAME
-          value: "ushasree_product"
-        - name: PORT
-          value: "3002"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: product-service
+          image: nvvrsre/product-service:v1
+          ports:
+            - containerPort: 3002
+          env:
+            - name: DB_HOST
+              value: "mysql"
+            - name: DB_USER
+              value: "ushasree-db"
+            - name: DB_PASSWORD
+              value: "ushasree123"
+            - name: DB_NAME
+              value: "ushasree_product"
+            - name: PORT
+              value: "3002"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"

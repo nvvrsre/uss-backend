@@ -13,25 +13,25 @@ spec:
         app: order-service
     spec:
       containers:
-      - name: order-service
-        image: nvvrsre/order-service
-        ports:
-        - containerPort: 3004
-        env:
-        - name: DB_HOST
-          value: "mysql"
-        - name: DB_USER
-          value: "ushasree-db"
-        - name: DB_PASSWORD
-          value: "ushasree123"
-        - name: DB_NAME
-          value: "ushasree_order"
-        - name: PORT
-          value: "3004"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        - name: order-service
+          image: nvvrsre/order-service:v1
+          ports:
+            - containerPort: 3004
+          env:
+            - name: DB_HOST
+              value: "mysql"
+            - name: DB_USER
+              value: "ushasree-db"
+            - name: DB_PASSWORD
+              value: "ushasree123"
+            - name: DB_NAME
+              value: "ushasree_order"
+            - name: PORT
+              value: "3004"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
