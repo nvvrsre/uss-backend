@@ -1,3 +1,6 @@
+\$1
+
+---
 
 ## **What is OIDC?**
 
@@ -266,5 +269,6 @@ Provides better performance, HA, and secure external access in production.
 
 You can use these steps for any **fresh EKS cluster**—just update the cluster name and region as needed!
 
----
+------
 
+## sqa_84eb67203a2032c090f71b67c7e95ce4b4489ecc 
