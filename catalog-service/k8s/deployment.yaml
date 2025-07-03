@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: catalog-service
+      annotations:
+        argocd-sync-force: "16042346762"
     spec:
       containers:
         - name: catalog-service
