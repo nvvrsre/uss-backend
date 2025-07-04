@@ -12,11 +12,11 @@ spec:
       labels:
         app: cart-service
       annotations:
-        argocd-sync-force: "16042346762"
+        argocd-sync-force: "16066797212"
     spec:
       containers:
         - name: cart-service
-          image: nvvrsre/cart-service
+          image: nvvrsre/cart-service:v1
           ports:
             - containerPort: 3003
           env:
