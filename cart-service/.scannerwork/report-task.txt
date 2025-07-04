@@ -1,6 +1,6 @@
 projectKey=cart-service
-serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
+serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
-dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=cart-service
-ceTaskId=b2ae48c9-6122-499e-866f-b9b389342bbc
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=b2ae48c9-6122-499e-866f-b9b389342bbc
+dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=cart-service
+ceTaskId=9f9fea08-6ceb-4706-9a26-1ba41241bcdf
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=9f9fea08-6ceb-4706-9a26-1ba41241bcdf
