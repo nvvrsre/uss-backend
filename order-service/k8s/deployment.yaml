@@ -12,11 +12,11 @@ spec:
       labels:
         app: order-service
       annotations:
-        argocd-sync-force: "16042346762"
+        argocd-sync-force: "16066797212"
     spec:
       containers:
         - name: order-service
-          image: nvvrsre/order-service
+          image: nvvrsre/order-service:v1
           ports:
             - containerPort: 3004
           env:
