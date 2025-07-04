@@ -2,5 +2,5 @@ projectKey=catalog-service
 serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
 dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=catalog-service
-ceTaskId=d22b8dd0-a199-4280-b047-8cddec543a6a
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=d22b8dd0-a199-4280-b047-8cddec543a6a
+ceTaskId=1c828ae7-59f3-4a1e-915c-b6a557aca2e0
+ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=1c828ae7-59f3-4a1e-915c-b6a557aca2e0

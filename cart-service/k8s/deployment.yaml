@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: cart-service
+      annotations:
+        argocd-sync-force: "16042346762"
     spec:
       containers:
         - name: cart-service

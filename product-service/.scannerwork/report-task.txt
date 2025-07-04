@@ -2,5 +2,5 @@ projectKey=product-service
 serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
 serverVersion=25.5.0.107428
 dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=product-service
-ceTaskId=33f94cbf-557e-4f64-a0c1-93d16284de51
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=33f94cbf-557e-4f64-a0c1-93d16284de51
+ceTaskId=9288f85e-33e5-474f-9785-49a2935def82
+ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=9288f85e-33e5-474f-9785-49a2935def82
