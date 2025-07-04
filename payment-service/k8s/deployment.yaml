@@ -12,11 +12,11 @@ spec:
       labels:
         app: payment-service
       annotations:
-        argocd-sync-force: "16042346762"
+        argocd-sync-force: "16066797212"
     spec:
       containers:
         - name: payment-service
-          image: nvvrsre/payment-service
+          image: nvvrsre/payment-service:v1
           ports:
             - containerPort: 3005
           env:
