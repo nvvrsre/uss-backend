@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cart-service
-          image: nvvrsre/cart-service:v1
+          image: nvvrsre/cart-service
           ports:
             - containerPort: 3003
           env:

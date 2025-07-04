@@ -19,6 +19,23 @@ kubectl create namespace argocd
 kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
+## Patch the ArgoCD server deployment for Insecure Mode
+## You need to add --insecure to the argocd-server container args.
+
+ kubectl patch deployment argocd-server \
+  --type='json' \
+  -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--insecure"}]'
+
+
+## Make Sure the Service Exposes HTTP
+## Your service should already expose 80:8080 as HTTP (if not, patch it):
+
+  kubectl patch svc argocd-server \
+  -p '{"spec": {"ports": [{"name": "http", "port": 80, "targetPort": 8080}]}}'
+
+
+
+
 ## Step 4: Expose Argo CD API Server via LoadBalancer
 
 ```bash

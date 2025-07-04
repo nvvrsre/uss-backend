@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payment-service
-          image: nvvrsre/payment-service:v1
+          image: nvvrsre/payment-service
           ports:
             - containerPort: 3005
           env:

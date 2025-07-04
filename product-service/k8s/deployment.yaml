@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: nvvrsre/product-service:v1
+          image: nvvrsre/product-service
           ports:
             - containerPort: 3002
           env:

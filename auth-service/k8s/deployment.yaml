@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: nvvrsre/auth-service:v1
+          image: nvvrsre/auth-service
           ports:
             - containerPort: 3001
           env:

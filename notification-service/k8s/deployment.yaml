@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: nvvrsre/notification-service:v1
+          image: nvvrsre/notification-service
           ports:
             - containerPort: 3006
           env:
