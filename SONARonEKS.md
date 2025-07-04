@@ -51,9 +51,9 @@
 ## **1. Clean Up Old Resources (If Reinstalling)**
 
 ```sh
-eksctl delete addon --name aws-ebs-csi-driver --cluster <cluster-name> --region <region>
+eksctl delete addon --name aws-ebs-csi-driver --cluster nvvr-eks --region ap-south-1
 kubectl delete serviceaccount ebs-csi-controller-sa -n kube-system
-eksctl delete iamserviceaccount --name ebs-csi-controller-sa --namespace kube-system --cluster <cluster-name> --region <region>
+eksctl delete iamserviceaccount --name ebs-csi-controller-sa --namespace kube-system --cluster nvvr-eks --region ap-south-1
 helm uninstall aws-ebs-csi-driver -n kube-system || true
 ```
 
@@ -82,7 +82,7 @@ PVCs may stay in “Pending” state and pods may not start.
 ## **3. Enable OIDC Provider for EKS**
 
 ```sh
-eksctl utils associate-iam-oidc-provider --region=<region> --cluster=<cluster-name> --approve
+eksctl utils associate-iam-oidc-provider --region=ap-south-1 --cluster=nvvr-eks --approve
 ```
 
 **Why?**\
@@ -95,7 +95,7 @@ Pods can’t get AWS permissions—EBS volumes won’t mount.
 ## **4. Install EBS CSI Driver as EKS Add-on**
 
 ```sh
-eksctl create addon --name aws-ebs-csi-driver --cluster <cluster-name> --region <region>
+eksctl create addon --name aws-ebs-csi-driver --cluster nvvr-eks --region ap-south-1
 ```
 
 **Why?**\
@@ -111,7 +111,7 @@ SonarQube PVCs will never get EBS volumes attached.
 eksctl create iamserviceaccount \
   --name ebs-csi-controller-sa \
   --namespace kube-system \
-  --cluster <cluster-name> \
+  --cluster nvvr-eks \
   --attach-policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy \
   --approve
 ```
@@ -165,7 +165,7 @@ community:
 postgresql:
   enabled: true
 service:
-  type: LoadBalancer
+  type: ClusterIp
 ```
 
 **Why?**\
@@ -271,4 +271,4 @@ You can use these steps for any **fresh EKS cluster**—just update the cluster 
 
 ------
 
-## sqa_84eb67203a2032c090f71b67c7e95ce4b4489ecc 
+## sqa_93476554cd8bbf46e0bfdaa1c7c951b84bb56258

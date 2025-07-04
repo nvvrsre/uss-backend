@@ -32,6 +32,13 @@
 
 - Exposes your Kubernetes services to the outside world and performs path/host-based routing.
 
+
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.crds.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+
+
 #### **Option A: Official Manifest**
 
 ```sh
