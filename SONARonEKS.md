@@ -271,4 +271,4 @@ You can use these steps for any **fresh EKS cluster**—just update the cluster 
 
 ------
 
-## sqa_93476554cd8bbf46e0bfdaa1c7c951b84bb56258
+## sqa_b99d6ed8e55c36c3043ba92a75da634add5b17c7

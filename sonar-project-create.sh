@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ====== CONFIG ======
-SONAR_URL="http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000"      # e.g., http://sonarqube.mycompany.com
+SONAR_URL="https://sonarqube.ushasree.xyz"      # e.g., http://sonarqube.mycompany.com
 SONAR_AUTH="admin:Sonarqube@123"                # Change to your admin credentials
 
 # List of microservices (project key and name are the same)
