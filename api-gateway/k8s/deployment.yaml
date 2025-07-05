@@ -12,11 +12,11 @@ spec:
       labels:
         app: api-gateway
       annotations:
-        argocd-sync-force: "16042346762"
+        argocd-sync-force: "16066797212"
     spec:
       containers:
         - name: api-gateway
-          image: nvvrsre/api-gateway
+          image: nvvrsre/api-gateway:v1
           ports:
             - containerPort: 3000
           env:

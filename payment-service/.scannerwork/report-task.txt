@@ -1,6 +1,6 @@
 projectKey=payment-service
-serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
+serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
-dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=payment-service
-ceTaskId=67bf7e9a-56d3-4d43-86db-5ea729aff344
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=67bf7e9a-56d3-4d43-86db-5ea729aff344
+dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=payment-service
+ceTaskId=b3034020-e38b-4eae-b05e-89d8c67fde61
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=b3034020-e38b-4eae-b05e-89d8c67fde61

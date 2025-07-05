@@ -12,11 +12,11 @@ spec:
       labels:
         app: notification-service
       annotations:
-        argocd-sync-force: "16042346762"
+        argocd-sync-force: "16066797212"
     spec:
       containers:
         - name: notification-service
-          image: nvvrsre/notification-service
+          image: nvvrsre/notification-service:v1
           ports:
             - containerPort: 3006
           env:

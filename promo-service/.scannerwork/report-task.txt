@@ -1,6 +1,6 @@
 projectKey=promo-service
-serverUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000
+serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
-dashboardUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/dashboard?id=promo-service
-ceTaskId=df8a35ca-7957-4aca-8b69-f94d9d274d7d
-ceTaskUrl=http://a32e0c23cbc5145b9a828773edb792af-1006818520.ap-south-1.elb.amazonaws.com:9000/api/ce/task?id=df8a35ca-7957-4aca-8b69-f94d9d274d7d
+dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=promo-service
+ceTaskId=21f9465d-12de-4fe8-83cc-75b478ee44cc
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=21f9465d-12de-4fe8-83cc-75b478ee44cc
