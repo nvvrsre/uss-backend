@@ -12,7 +12,7 @@ spec:
       labels:
         app: cart-service
       annotations:
-        argocd-sync-force: "16066797212"
+        argocd-sync-force: "16084413457"
     spec:
       containers:
         - name: cart-service
