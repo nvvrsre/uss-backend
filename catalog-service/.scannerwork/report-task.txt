@@ -2,5 +2,5 @@ projectKey=catalog-service
 serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
 dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=catalog-service
-ceTaskId=976ee860-95cc-44db-99a7-cc9344b13234
-ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=976ee860-95cc-44db-99a7-cc9344b13234
+ceTaskId=2fbf7f5f-14ed-49de-bae6-d180c197dabb
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=2fbf7f5f-14ed-49de-bae6-d180c197dabb
