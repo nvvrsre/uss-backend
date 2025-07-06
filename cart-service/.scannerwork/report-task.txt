@@ -2,5 +2,5 @@ projectKey=cart-service
 serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
 dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=cart-service
-ceTaskId=e1b8c2a2-6014-4ce6-bf61-eba64e022097
-ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=e1b8c2a2-6014-4ce6-bf61-eba64e022097
+ceTaskId=a41a5445-ec38-4731-ac4b-611df637338f
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=a41a5445-ec38-4731-ac4b-611df637338f
