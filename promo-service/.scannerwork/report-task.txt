@@ -2,5 +2,5 @@ projectKey=promo-service
 serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
 dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=promo-service
-ceTaskId=6135b1a3-3925-47ea-ab70-99e8fc44e107
-ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=6135b1a3-3925-47ea-ab70-99e8fc44e107
+ceTaskId=6c7adf96-5fb1-4803-862d-6d9009a0803b
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=6c7adf96-5fb1-4803-862d-6d9009a0803b
