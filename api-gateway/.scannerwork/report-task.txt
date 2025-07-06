@@ -2,5 +2,5 @@ projectKey=api-gateway
 serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
 dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=api-gateway
-ceTaskId=81b2686d-f648-43ff-a4b6-5ccacfd289dc
-ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=81b2686d-f648-43ff-a4b6-5ccacfd289dc
+ceTaskId=56fd2b2e-7f0f-434e-9621-a9b715457316
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=56fd2b2e-7f0f-434e-9621-a9b715457316
