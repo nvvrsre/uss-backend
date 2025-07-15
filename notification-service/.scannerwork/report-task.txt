@@ -2,5 +2,5 @@ projectKey=notification-service
 serverUrl=https://sonarqube.ushasree.xyz
 serverVersion=25.5.0.107428
 dashboardUrl=https://sonarqube.ushasree.xyz/dashboard?id=notification-service
-ceTaskId=51414608-d213-4bc0-8d3f-9d226490da2f
-ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=51414608-d213-4bc0-8d3f-9d226490da2f
+ceTaskId=483ddfb9-e586-4b48-9e45-153ff7dd02ed
+ceTaskUrl=https://sonarqube.ushasree.xyz/api/ce/task?id=483ddfb9-e586-4b48-9e45-153ff7dd02ed
