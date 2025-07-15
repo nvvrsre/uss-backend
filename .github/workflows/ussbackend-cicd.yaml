@@ -1,13 +1,13 @@
-name: Ushasree CI Pipeline (Matrix for All Backend Services)
+name: Ushasree Backend CI/CD Pipeline (Helm + ArgoCD)
 
 on:
   push:
     branches: [ main ]
 
-permissions: write-all   # Needed for pushing changes back to the repo
+permissions: write-all
 
 jobs:
-  uss-backend-ci:
+  uss-backend-ci-cd:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     strategy:
@@ -84,36 +84,25 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:v${{ steps.version.outputs.VERSION }}
 
+      # --- Helm image tag update ---
       - name: Install yq
         run: |
           sudo wget https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64 -O /usr/local/bin/yq
           sudo chmod +x /usr/local/bin/yq
 
-      - name: Update deployment.yaml with new image tag
+      - name: Update Helm values.yaml with new image tag
         run: |
-          yq -i '
-            .spec.template.spec.containers[] |=
-              select(.name == "${{ matrix.service }}") .image = "${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:v${{ steps.version.outputs.VERSION }}"
-            ' ${{ matrix.service }}/k8s/deployment.yaml
+          yq -i '.image.tag = "v${{ steps.version.outputs.VERSION }}"' ${{ matrix.service }}/helm/values.yaml
 
-      - name: Force ArgoCD Sync with dummy annotation
-        run: |
-          yq -i '
-            .spec.template.metadata.annotations["argocd-sync-force"] = strenv(GITHUB_RUN_ID)
-          ' ${{ matrix.service }}/k8s/deployment.yaml
+      - name: Show image tag after update
+        run: yq '.image.tag' ${{ matrix.service }}/helm/values.yaml
 
-      - name: Show image after update
-        run: grep image ${{ matrix.service }}/k8s/deployment.yaml
-
-      - name: Commit, rebase, and push updated deployment.yaml
+      - name: Commit and push updated values.yaml
         run: |
           git config --global user.email "nvvr53@gmail.com"
           git config --global user.name "nvvrsre"
-          git add ${{ matrix.service }}/k8s/deployment.yaml
-          git commit -m "ci: update image and force sync for ${{ matrix.service }} to v${{ steps.version.outputs.VERSION }}" || echo "No changes to commit"
-          # Auto-add and commit any new changes before rebase (handles npm or yq side effects)
-          git add -u
-          git commit -m "ci: auto-stage any changes before rebase" || echo "No changes to commit"
+          git add ${{ matrix.service }}/helm/values.yaml
+          git commit -m "ci: update image tag for ${{ matrix.service }} to v${{ steps.version.outputs.VERSION }}" || echo "No changes to commit"
           n=0
           until [ $n -ge 3 ]
           do
@@ -124,4 +113,3 @@ jobs:
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
