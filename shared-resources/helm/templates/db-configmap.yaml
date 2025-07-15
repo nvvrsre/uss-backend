@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: db-config
+  namespace: {{ .Release.Namespace }}
 data:
   DB_HOST: {{ .Values.dbConfig.host | quote }}
   DB_NAME: {{ .Values.dbConfig.name | quote }}
