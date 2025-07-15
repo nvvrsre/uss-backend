@@ -3,6 +3,18 @@ name: Ushasree Backend CI/CD Pipeline (Helm + ArgoCD)
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'api-gateway/**'
+      - 'auth-service/**'
+      - 'cart-service/**'
+      - 'catalog-service/**'
+      - 'notification-service/**'
+      - 'order-service/**'
+      - 'payment-service/**'
+      - 'product-service/**'
+      - 'promo-service/**'
+      - 'shared-resources/helm/**'
+      - '.github/workflows/backend-ci-cd.yaml'
 
 permissions: write-all
 
@@ -103,6 +115,40 @@ jobs:
           git config --global user.name "nvvrsre"
           git add ${{ matrix.service }}/helm/values.yaml
           git commit -m "ci: update image tag for ${{ matrix.service }} to v${{ steps.version.outputs.VERSION }}" || echo "No changes to commit"
+          n=0
+          until [ $n -ge 3 ]
+          do
+            git pull --rebase origin main && git push origin main && break
+            n=$((n+1))
+            echo "Push failed, retrying ($n/3)..."
+            sleep 2
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  shared-resources-ci-cd:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: uss-backend-ci-cd   # Waits for microservice jobs to finish first
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install yq
+        run: |
+          sudo wget https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64 -O /usr/local/bin/yq
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Show current shared-resources values.yaml
+        run: yq '.' shared-resources/helm/values.yaml
+
+      - name: Commit and push updated shared-resources values.yaml
+        run: |
+          git config --global user.email "nvvr53@gmail.com"
+          git config --global user.name "nvvrsre"
+          git add shared-resources/helm/values.yaml || echo "Nothing to add"
+          git commit -m "ci: update shared resource values" || echo "No changes to commit"
           n=0
           until [ $n -ge 3 ]
           do
