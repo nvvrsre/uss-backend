@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: nvvrsre/promo-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3007
+
+containerPort: 3007
+
+env:
+  dbConfigName: db-config
+  dbSecretName: db-secret
+  port: "3007"
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "500m"

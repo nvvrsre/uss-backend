@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: nvvrsre/api-gateway
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+containerPort: 3000
+
+env:
+  - name: PORT
+    value: "3000"
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "500m"

@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: db-config
 data:
-  DB_HOST: nvvr-rds.c588mswco6jw.ap-south-1.rds.amazonaws.com
-  DB_NAME: nvvrdb
+  DB_HOST: ushasreestoresdb.c500a6yo2g1r.ap-south-1.rds.amazonaws.com
+  DB_NAME: ushasreestoresdb
   DB_PORT: "3306"

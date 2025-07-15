@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: nvvrsre/catalog-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3008
+
+containerPort: 3008
+
+env:
+  dbConfigName: db-config
+  dbSecretName: db-secret
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "256Mi"
+    cpu: "500m"

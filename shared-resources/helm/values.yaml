@@ -1,0 +1,8 @@
+dbConfig:
+  host: ushasreestoresdb.c500a6yo2g1r.ap-south-1.rds.amazonaws.com
+  name: ushasreestoresdb
+  port: "3306"
+
+dbSecret:
+  user: ushasreestores
+  password: ushasreestores123
