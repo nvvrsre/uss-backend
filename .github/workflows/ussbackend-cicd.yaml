@@ -14,7 +14,7 @@ on:
       - 'product-service/**'
       - 'promo-service/**'
       - 'shared-resources/helm/**'
-      - '.github/workflows/backend-ci-cd.yaml'
+      - '.github/workflows/ussbackend-cicd.yaml'
 
 permissions: write-all
 
