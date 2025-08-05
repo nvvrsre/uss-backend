@@ -94,7 +94,7 @@ app.post('/orders', async (req, res) => {
       await axios.post('http://notification-service:3006/notify', {
         email,
         subject: 'Order Placed Successfully - UshaSree Stores',
-        message: `Hi ${name},\n\nThank you for your order!\nOrder ID: ${newOrder.id}\nTotal: ₹${final_amount}\n\nWe will notify you when your order is shipped.`,
+        message: `Thank you for your order!\nOrder ID: ${newOrder.id}\nTotal: ₹${final_amount}\n\nWe will notify you when your order is shipped.`,
         name
       });
     } catch (notifyErr) {
