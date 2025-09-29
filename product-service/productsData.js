@@ -1,6 +1,6 @@
 module.exports = [
   {
-    id: Iphone,
+    id: "Iphone",
     title: "Apple iPhone 17 Pro",
     description: "512GB, Silver, 6.3-inch display. Pro camera system.",
     price: 159900,
