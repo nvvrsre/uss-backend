@@ -24,7 +24,7 @@ module.exports = [
     category: "Mobiles"
   },
   {
-    id: MI,
+    id: "MI",
     title: "Xiaomi Redmi Note 13 Pro",
     description: "128GB, Blue, 6.67-inch AMOLED. 200MP camera.",
     price: 23999,
@@ -32,7 +32,7 @@ module.exports = [
     category: "Mobiles"
   },
   {
-    id: Realme,
+    id: "Realme",
     title: "Realme 13 Pro+",
     description: "256GB, Sunrise Beige, 200MP camera. 5000mAh battery.",
     price: 27999,
@@ -40,7 +40,7 @@ module.exports = [
     category: "Mobiles"
   },
   {
-    id: Macbook,
+    id: "Macbook",
     title: "Apple MacBook Air M2",
     description: "13.6-inch, 8GB RAM, 256GB SSD, Space Gray.",
     price: 104999,
