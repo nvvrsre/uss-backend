@@ -1,14 +1,14 @@
 module.exports = [
   {
-    id: 1,
-    title: "Apple iPhone 15 Pro",
-    description: "128GB, Silver, 6.1-inch display. Pro camera system.",
-    price: 129900,
-    image: "/assets/products/iphone15pro.jpg",
+    id: Iphone,
+    title: "Apple iPhone 17 Pro",
+    description: "512GB, Silver, 6.3-inch display. Pro camera system.",
+    price: 159900,
+    image: "/assets/products/iphone-17-pro.jpg",
     category: "Mobiles"
   },
   {
-    id: 2,
+    id: "Samsung Mobile",
     title: "Samsung Galaxy S24 Ultra",
     description: "256GB, Titanium Gray, 6.8-inch AMOLED. 200MP camera.",
     price: 119999,
@@ -16,15 +16,15 @@ module.exports = [
     category: "Mobiles"
   },
   {
-    id: 3,
-    title: "OnePlus 12",
+    id: "Oneplus Mobile",
+    title: "OnePlus 13",
     description: "256GB, Black, Snapdragon 8 Gen 3. 50MP triple camera.",
     price: 64999,
     image: "/assets/products/oneplus12.jpg",
     category: "Mobiles"
   },
   {
-    id: 4,
+    id: MI,
     title: "Xiaomi Redmi Note 13 Pro",
     description: "128GB, Blue, 6.67-inch AMOLED. 200MP camera.",
     price: 23999,
@@ -32,15 +32,15 @@ module.exports = [
     category: "Mobiles"
   },
   {
-    id: 5,
-    title: "Realme 11 Pro+",
+    id: Realme,
+    title: "Realme 13 Pro+",
     description: "256GB, Sunrise Beige, 200MP camera. 5000mAh battery.",
     price: 27999,
     image: "/assets/products/realme11proplus.jpg",
     category: "Mobiles"
   },
   {
-    id: 6,
+    id: Macbook,
     title: "Apple MacBook Air M2",
     description: "13.6-inch, 8GB RAM, 256GB SSD, Space Gray.",
     price: 104999,
@@ -48,7 +48,7 @@ module.exports = [
     category: "Laptops"
   },
   {
-    id: 7,
+    id: "Dell Lap",
     title: "Dell XPS 15",
     description: "15.6-inch, Intel i7, 16GB RAM, 512GB SSD.",
     price: 149999,
@@ -56,7 +56,7 @@ module.exports = [
     category: "Laptops"
   },
   {
-    id: 8,
+    id: "HP Lap",
     title: "HP Pavilion 14",
     description: "14-inch FHD, Intel i5, 16GB RAM, 512GB SSD.",
     price: 72999,
@@ -64,7 +64,7 @@ module.exports = [
     category: "Laptops"
   },
   {
-    id: 9,
+    id: "Lenova Lap",
     title: "Lenovo ThinkPad E14",
     description: "14-inch, Ryzen 5, 8GB RAM, 512GB SSD.",
     price: 61999,
@@ -72,7 +72,7 @@ module.exports = [
     category: "Laptops"
   },
   {
-    id: 10,
+    id: "Asus Lap",
     title: "Asus Vivobook 16X",
     description: "16-inch, Intel i7, 16GB RAM, 1TB SSD.",
     price: 85999,
@@ -80,7 +80,7 @@ module.exports = [
     category: "Laptops"
   },
   {
-    id: 11,
+    id: "Samsung Fridge",
     title: "Samsung 253L Double Door Refrigerator",
     description: "Digital Inverter, 2 Star, Elegant Inox.",
     price: 24999,
@@ -88,7 +88,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 12,
+    id: "LG Washing Machine",
     title: "LG 7kg Front Load Washing Machine",
     description: "Inverter, 5 Star, White.",
     price: 29999,
@@ -96,7 +96,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 13,
+    id: "Prestige Induction Cooktop",
     title: "Prestige Induction Cooktop",
     description: "1900-Watt, Black.",
     price: 2599,
@@ -104,7 +104,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 14,
+    id: "Philips Mixer Grinder",
     title: "Philips Mixer Grinder",
     description: "750W, 4 Jars, White & Purple.",
     price: 4499,
@@ -112,7 +112,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 15,
+    id: "Dyson Vacuum",
     title: "Dyson V12 Cordless Vacuum",
     description: "Stick Vacuum Cleaner, Powerful Suction.",
     price: 38999,
@@ -120,7 +120,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 16,
+    id: "Samsung QLED TV",
     title: "Samsung 55\" 4K QLED Smart TV",
     description: "2024 Model, Voice Assistant, AirSlim.",
     price: 68999,
@@ -128,7 +128,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 17,
+    id: "Sony WH-1000XM5 Headphones",
     title: "Sony WH-1000XM5 Headphones",
     description: "Industry Leading Noise Cancellation.",
     price: 29999,
@@ -136,7 +136,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 18,
+    id: "boAt Stone 1200 Speaker",
     title: "boAt Stone 1200 Speaker",
     description: "14W Bluetooth Speaker, IPX7.",
     price: 3799,
@@ -144,7 +144,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 19,
+    id: "Mi Band 7",
     title: "Mi Band 7",
     description: "Fitness Band, 1.62” AMOLED Display.",
     price: 3199,
@@ -152,7 +152,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 20,
+    id: "Apple iPad 10th Gen",
     title: "Apple iPad 10th Gen",
     description: "10.9-inch, 64GB, Wi-Fi, Silver.",
     price: 39999,
@@ -160,7 +160,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 21,
+    id: "Canon EOS 200D",
     title: "Canon EOS 200D Mark II",
     description: "24.1MP DSLR Camera with 18-55mm Lens.",
     price: 58999,
@@ -168,7 +168,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 22,
+    id: "Voltas AC",
     title: "Voltas 1.5 Ton Inverter AC",
     description: "5 Star, Copper, White.",
     price: 33999,
@@ -176,7 +176,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 23,
+    id: "IFB Microwave",
     title: "IFB 20 L Solo Microwave",
     description: "Mechanical Knob, Black.",
     price: 5699,
@@ -184,7 +184,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 24,
+    id: "Amazon Echo Dot 5th Gen",
     title: "Amazon Echo Dot 5th Gen",
     description: "Smart Speaker with Alexa (Blue).",
     price: 4499,
@@ -192,7 +192,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 25,
+    id: "Noise ColorFit Pro 4",
     title: "Noise ColorFit Pro 4 Smartwatch",
     description: "1.85” Display, Bluetooth Calling.",
     price: 2599,
@@ -200,7 +200,7 @@ module.exports = [
     category: "Electronics"
   },
   {
-    id: 26,
+    id: "Bajaj Water Heater",
     title: "Bajaj Majesty Water Heater",
     description: "25L, Vertical, White.",
     price: 8499,
@@ -208,7 +208,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 27,
+    id: "Butterfly Kettle",
     title: "Butterfly Rapid Kettle",
     description: "1.5L, Stainless Steel.",
     price: 1499,
@@ -216,7 +216,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 28,
+    id: "Prestige Gas Stove 4 Burner",
     title: "Prestige Gas Stove 4 Burner",
     description: "Glass Top, Black.",
     price: 7499,
@@ -224,7 +224,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 29,
+    id: "havells-1200mm-ceiling-fan",
     title: "Havells 1200mm Ceiling Fan",
     description: "White, Energy Saving.",
     price: 2499,
@@ -232,7 +232,7 @@ module.exports = [
     category: "Household"
   },
   {
-    id: 30,
+    id: "Philips Air Fryer",
     title: "Philips Air Fryer",
     description: "Rapid Air Technology, Black, 4.1L.",
     price: 9299,
