@@ -3,7 +3,7 @@ module.exports = [
     id: "Iphone",
     title: "Apple iPhone 17 Pro",
     description: "512GB, Silver, 6.3-inch display. Pro camera system.",
-    price: 159900,
+    price: 149900,
     image: "/assets/products/iphone-17-pro.jpg",
     category: "Mobiles"
   },
@@ -11,7 +11,7 @@ module.exports = [
     id: "Samsung Mobile",
     title: "Samsung Galaxy S24 Ultra",
     description: "256GB, Titanium Gray, 6.8-inch AMOLED. 200MP camera.",
-    price: 119999,
+    price: 79999,
     image: "/assets/products/s24ultra.jpg",
     category: "Mobiles"
   },
